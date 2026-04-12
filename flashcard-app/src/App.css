@@ -4,25 +4,19 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f172a;
-  color: #f1f5f9;
-}
-
 .card {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  gap: 20px; /* Increased gap for better breathing room */
+  width: 95vw; /* Takes up most of the screen on mobile */
+  max-width: 500px; /* Won't get awkwardly huge on desktop */
+  margin: 0 auto;
 }
 
 .container {
   height: 30px;
-  background-color: #475569;
+  background-color: var(--secondary-color);
   margin-top: 30px;
   display: flex;
   align-items: center;
@@ -30,7 +24,7 @@ body {
 }
 
 .progress-bar {
-  background-color: #38bdf8;
+  background-color: var(--accent-color);
   height: 23px;
   border-radius: 5px;
   margin: 0 5px;
@@ -40,19 +34,38 @@ body {
   justify-content: center;
   font-size: 0.85em;
   padding: 10px;
+  transition: width 0.4s ease-in-out; /* This is the secret sauce */
+  overflow: hidden; /* Prevents text from spilling out when the bar is very thin */
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--accent-color) 0%, #fbbf24 100%);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); /* Subtle glow */
 }
 
-.question-card, .answer-card {
+.question-card {
   padding: 10px;
-  border: 2px solid #475569;
+  border: 2px solid var(--secondary-color);
   border-radius: 8px;
 }
 
+.question-card {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+
 .answer-card {
+  width: 100%;
   height: 100%;
   position: relative;
   transition: transform 0.7s;
   transform-style: preserve-3d;
+  font-family: var(--answer-font);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: normal;
 }
 
 .show {
@@ -60,34 +73,47 @@ body {
 }
 
 .scene {
-  height: 226px;
-  perspective: 600px;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
 }
 
 .answer-section {
   position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
   backface-visibility: hidden;
 }
 
 .back {
-  transform: rotateY( 180deg );
+  transform: rotateY(180deg);
 }
 
-.question-section, .answer-section {
-  width: 450px;
-  height: 200px;
-  background-color: #1e293b;
+.question-section,
+.answer-section {
+  width: 100%;
+  background-color: var(--card-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  border: 2px solid var(--secondary-color); /* Consistent border */
   border-radius: 8px;
+  padding: 20px;
+}
+
+.question-section {
+  height: 200px; 
+  margin-bottom: 0;
 }
 
 .button-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e293b;
+  background-color: var(--card-background-color);
+  ;
   margin-top: 10px;
   padding: 10px;
   border-radius: 8px;
@@ -95,12 +121,16 @@ body {
 
 .btn {
   width: 80px;
-  background-color: #475569;
+  background-color: var(--secondary-color);
   color: inherit;
   padding: 7px;
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
 }
 
 .show-hide {
@@ -114,7 +144,7 @@ body {
 
 
 .btn.active {
-  background-color: #38bdf8;
+  background-color: var(--accent-color);
 }
 
 .animation-effect {
@@ -125,11 +155,31 @@ body {
   0% {
     width: 0%;
   }
+
   50% {
     width: 50%;
   }
 
   100% {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 22px; /* Smaller title for mobile */
+  }
+
+  .question-card {
+    font-size: 20px; /* Easier to read on small screens */
+  }
+
+  .answer-card {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 70px; /* Slightly smaller buttons */
+    font-size: 13px;
   }
 }

@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --background-color: #F8FAFC;
+  --card-background-color: #FFFFFF;
+  --primary-text-color: #334155;
+  --accent-color: #F59E0B;
+  --secondary-color: #CBD5E1;
+  --font-heading: Poppins, san-serif;
+  --answer-font: Nunito, san-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
 h1 {
   text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0F172A;
+    --card-background-color: #1E293B;
+    --primary-text-color: #F1F5F9;
+    --accent-color: #38BDF8;
+    --secondary-color: #475569;
+  }
 }
