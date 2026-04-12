@@ -142,6 +142,25 @@
   border-radius: 8px;
 }
 
+/* 1. The Hover State - Lightly lift the button */
+.btn:hover:not(:disabled), 
+.show-hide:hover:not(:disabled) {
+  filter: brightness(1.1); /* Makes the color pop slightly */
+  transform: translateY(-1px); /* Moves it up 1 pixel */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. The Active State - The "Press" effect */
+.btn:active:not(:disabled), 
+.show-hide:active:not(:disabled) {
+  transform: translateY(1px) scale(0.96); /* Sinks it down and shrinks it slightly */
+  box-shadow: none;
+}
+
+/* 3. Smoothness - Add this to your base .btn and .show-hide classes */
+.btn, .show-hide {
+  transition: all 0.2s ease; /* Makes the hover/press smooth, not jerky */
+}
 
 .btn.active {
   background-color: var(--accent-color);
