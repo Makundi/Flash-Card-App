@@ -7,7 +7,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   gap: 20px; /* Increased gap for better breathing room */
   width: 95vw; /* Takes up most of the screen on mobile */
   max-width: 500px; /* Won't get awkwardly huge on desktop */
@@ -42,17 +41,14 @@
 }
 
 .question-card {
-  padding: 10px;
-  border: 2px solid var(--secondary-color);
-  border-radius: 8px;
-}
-
-.question-card {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 24px;
   text-align: center;
   line-height: 1.4;
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
 }
 
 .answer-card {
@@ -113,10 +109,14 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--card-background-color);
-  ;
   margin-top: 10px;
   padding: 10px;
   border-radius: 8px;
+}
+
+.button-section.success {
+  justify-content: center;
+  background-color: var(--background-color);
 }
 
 .btn {
@@ -157,9 +157,8 @@
   box-shadow: none;
 }
 
-/* 3. Smoothness - Add this to your base .btn and .show-hide classes */
 .btn, .show-hide {
-  transition: all 0.2s ease; /* Makes the hover/press smooth, not jerky */
+  transition: all 0.2s ease;
 }
 
 .btn.active {
@@ -186,11 +185,11 @@
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 22px; /* Smaller title for mobile */
+    font-size: 22px;
   }
 
   .question-card {
-    font-size: 20px; /* Easier to read on small screens */
+    font-size: 20px;
   }
 
   .answer-card {
@@ -198,7 +197,7 @@
   }
 
   .btn {
-    width: 70px; /* Slightly smaller buttons */
+    width: 70px;
     font-size: 13px;
   }
 }

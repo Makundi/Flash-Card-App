@@ -30,52 +30,83 @@ function App() {
         <div className="container">
           <div
             className="progress-bar"
-            style={{ width: `${Math.floor((question / questions.length) * 100)}%` }}
+            style={{
+              width: `${Math.floor((question / questions.length) * 100)}%`,
+            }}
           >
-            <span>{Math.floor(((question) / questions.length) * 100) + '%'}</span>
+            <span>{Math.floor((question / questions.length) * 100) + "%"}</span>
           </div>
         </div>
-        <div className="question-card">
-          <div className="question-section">{question < questions.length ? questions[question].qn : "End"}</div>
-          <div className="button-section">
-            <button 
-              id="prev-btn" 
-              className={question > 0 ? "btn active" : "btn"}
-              onClick={() => {
-                setQuestion(question-1)
-                setShow(false)
-              }}
-              disabled = {question > 0 ? false : true}
-            >
-              Previous
-            </button>
-            <button
-              id="show-hide-btn"
-              className="show-hide"
-              onClick={() => setShow(!show)}
-              disabled={question < questions.length ? false : true}
-            >
-              {show ? "Hide Answer" : "Show Answer"}
-            </button>
-            <button
-              id="next-btn"
-              className={question < questions.length ? "btn active" : "btn"}
-              onClick={() => {
-                setQuestion(question+1)
-                setShow(false)
-              }}
-              disabled={question < questions.length ? false : true}
-            >
-              Next
-            </button>
+        {question === questions.length ? (
+          <div className="question-card">
+            <div className="question-section">
+              Deck Complete! 🎉
+              <br />
+              You've reviewed all {questions.length} cards.
+            </div>
+            <div className="button-section success">
+              <button
+                id="next-btn"
+                className="btn active"
+                onClick={() => {
+                  setQuestion(0);
+                }}
+              >
+                Reset
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="scene">
-          <div className={show ? "answer-card show" : "answer-card"}>
-            <div className="answer-section front">{question < questions.length ? "?" : "End"}</div>
-            <div className="answer-section back">{question < questions.length ? questions[question].ans : ""}</div>
-          </div>
-        </div>
+        ) : (
+          <>
+            <div className="question-card">
+              <div className="question-section">
+                {question < questions.length ? questions[question].qn : "End"}
+              </div>
+              <div className="button-section">
+                <button
+                  id="prev-btn"
+                  className={question > 0 ? "btn active" : "btn"}
+                  onClick={() => {
+                    setQuestion(question - 1);
+                    setShow(false);
+                  }}
+                  disabled={question > 0 ? false : true}
+                >
+                  Previous
+                </button>
+                <button
+                  id="show-hide-btn"
+                  className="show-hide"
+                  onClick={() => setShow(!show)}
+                  disabled={question < questions.length ? false : true}
+                >
+                  {show ? "Hide Answer" : "Show Answer"}
+                </button>
+                <button
+                  id="next-btn"
+                  className={question < questions.length ? "btn active" : "btn"}
+                  onClick={() => {
+                    setQuestion(question + 1);
+                    setShow(false);
+                  }}
+                  disabled={question < questions.length ? false : true}
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+            <div className="scene">
+              <div className={show ? "answer-card show" : "answer-card"}>
+                <div className="answer-section front">
+                  {question < questions.length ? "?" : ""}
+                </div>
+                <div className="answer-section back">
+                  {question < questions.length ? questions[question].ans : ""}
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
