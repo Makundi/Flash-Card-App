@@ -14,9 +14,6 @@
 body {
   width: 100vw;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--background-color);
   color: var(--primary-text-color);
 }
@@ -26,6 +23,7 @@ h1 {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 28px;
+  margin-top: 30px;
 }
 
 @media(prefers-color-scheme: dark) {
