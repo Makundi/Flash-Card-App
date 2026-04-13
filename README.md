@@ -2,28 +2,29 @@
 A sleek, responsive React application designed to help developers master core web development concepts through interactive study sessions. Featuring a tactile 3D card-flip experience and real-time progress tracking.
 
 ## ✨ Key Features
-3D Flip Interaction: Smooth CSS-driven 3D transforms that mimic physical index cards.
+* 3D Flip Interaction: Smooth CSS-driven 3D transforms that mimic physical index cards.
 
-Progress Tracking: Visual progress bar with dynamic "current step" indicators and success states.
+* Progress Tracking: Visual progress bar with dynamic "current step" indicators and success states.
 
-Responsive Design: Fully optimized for mobile, tablet, and desktop viewing.
+* Responsive Design: Fully optimized for mobile, tablet, and desktop viewing.
 
-Auto Dark Mode: Automatically adapts its color palette based on system preferences using prefers-color-scheme.
+* Auto Dark Mode: Automatically adapts its color palette based on system preferences using prefers-color-scheme.
 
-Accessibility Focused: High-contrast typography and color pairings designed for long study sessions.
+* Accessibility Focused: High-contrast typography and color pairings designed for long study sessions.
 
 ## 🛠️ Tech Stack
-Frontend: React.js
+* Frontend: React.js
 
-Styling: CSS3 (Variables, Flexbox, 3D Transforms)
+* Styling: CSS3 (Variables, Flexbox, 3D Transforms)
 
-Fonts: Poppins (Headings) & Nunito (Body) via Google Fonts
+* Fonts: Poppins (Headings) & Nunito (Body) via Google Fonts
 
 ## 🚀 Getting Started
-### Prerequisites
-Node.js (v14.0.0 or higher)
 
-npm or yarn
+### Prerequisites
+* Node.js (v14.0.0 or higher)
+
+* npm or yarn
 
 ### Installation
 
