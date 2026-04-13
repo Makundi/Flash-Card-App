@@ -42,19 +42,18 @@ A sleek, responsive React application designed to help developers master core we
 
 ## 📂 Project Structure
 
-Plaintext
-├── src/
-│   ├── App.jsx        # Main application logic & state management
-│   ├── App.css        # Layout-specific styling & 3D animations
-│   ├── index.css      # Design system variables (colors & typography)
-│   └── main.jsx       # React entry point
-└── public/            # Static assets
+    ├── src/
+    │   ├── App.jsx        # Main application logic & state management
+    │   ├── App.css        # Layout-specific styling & 3D animations
+    │   ├── index.css      # Design system variables (colors & typography)
+    │   └── main.jsx       # React entry point
+    └── public/            # Static assets
 
 ## 🗺️ Roadmap
-[ ] Add Spaced Repetition System (SRS) logic.
+* Add Spaced Repetition System (SRS) logic.
 
-[ ] Implement multiple deck selection (JavaScript, React, CSS, etc.).
+* Implement multiple deck selection (JavaScript, React, CSS, etc.).
 
-[ ] Add keyboard shortcuts for power-user navigation.
+* Add keyboard shortcuts for power-user navigation.
 
-[ ] Local storage integration to save progress across sessions.
+* Local storage integration to save progress across sessions.
