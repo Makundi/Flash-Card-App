@@ -3,23 +3,47 @@ import "./App.css";
 
 function App() {
   const questions = [
-    {
-      qn: "What is Java script?",
-      ans: "Js is cool",
-    },
-    {
-      qn: "Explain React Hooks",
-      ans: "Hooks are amazing",
-    },
-    {
-      qn: "What is Big O notation",
-      ans: "Big O is cool",
-    },
-    {
-      qn: "What is nano Tech used for",
-      ans: "Making advanced weapons",
-    },
-  ];
+  {
+    qn: "What is the difference between '==' and '==='?",
+    ans: "== compares value only (type coercion), while === compares both value and data type."
+  },
+  {
+    qn: "What does 'box-sizing: border-box' do?",
+    ans: "It includes padding and borders in the element's total width and height, making layout sizing much easier."
+  },
+  {
+    qn: "What is a JavaScript Closure?",
+    ans: "A function that 'remembers' its outer variables even after the outer function has finished executing."
+  },
+  {
+    qn: "What is the purpose of React's 'useEffect' hook?",
+    ans: "It allows you to perform side effects in functional components, such as data fetching or manual DOM updates."
+  },
+  {
+    qn: "What is the difference between 'let' and 'var'?",
+    ans: "let is block-scoped and cannot be redeclared, while var is function-scoped and can be hoisted/redeclared."
+  },
+  {
+    qn: "What is a 'Promise' in JavaScript?",
+    ans: "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value."
+  },
+  {
+    qn: "What is 'Lifting State Up' in React?",
+    ans: "Moving shared state to the closest common ancestor of components that need to access it."
+  },
+  {
+    qn: "What is the Document Object Model (DOM)?",
+    ans: "A programming interface that represents web pages as a tree structure, allowing scripts to change the content and style."
+  },
+  {
+    qn: "What is the difference between 'Flexbox' and 'CSS Grid'?",
+    ans: "Flexbox is designed for one-dimensional layouts (rows OR columns), while Grid is for two-dimensional layouts (rows AND columns)."
+  },
+  {
+    qn: "What does the 'Alt' attribute in an <img> tag do?",
+    ans: "It provides alternative text for screen readers and displays if the image fails to load, improving accessibility."
+  }
+];
   const [question, setQuestion] = useState(0);
   const [show, setShow] = useState(false);
 
