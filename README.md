@@ -28,17 +28,17 @@ A sleek, responsive React application designed to help developers master core we
 
 ### Installation
 
-1. Clone the repository
-    git clone https://github.com/Makundi/Flash-Card-App.git
+#### 1. Clone the repository
+git clone https://github.com/Makundi/Flash-Card-App.git
 
-2. Navigate to the project directory
-    cd Flash-Card-App/flashcard-app
+#### 2. Navigate to the project directory
+cd Flash-Card-App/flashcard-app
 
-3. Install dependencies
-    npm install
+#### 3. Install dependencies
+npm install
 
-4. Launch the development server
-    npm run dev
+#### 4. Launch the development server
+npm run dev
 
 ## 📂 Project Structure
 
