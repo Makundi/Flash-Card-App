@@ -31,16 +31,22 @@ function App() {
           <div
             className="progress-bar"
             style={{
-              width: `${Math.floor((question / questions.length) * 100)}%`,
+              width: `${Math.floor(((question + 1) / questions.length) * 100)}%`,
             }}
+          ></div>
+          <span 
+            className="progress-counter"
+            style={{ color: "#1e293b" }}
           >
-            <span>{Math.floor((question / questions.length) * 100) + "%"}</span>
-          </div>
+            {question < questions.length
+              ? `${question + 1} / ${questions.length}`
+              : "Build Complete 🚀"}
+          </span>
         </div>
         {question === questions.length ? (
           <div className="question-card">
             <div className="question-section">
-              Deck Complete! 🎉
+              Congratulation 🎉
               <br />
               You've reviewed all {questions.length} cards.
             </div>

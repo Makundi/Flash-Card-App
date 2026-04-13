@@ -19,7 +19,10 @@
   margin-top: 30px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
 }
 
 .progress-bar {
@@ -38,6 +41,15 @@
   white-space: nowrap;
   background: linear-gradient(90deg, var(--accent-color) 0%, #fbbf24 100%);
   box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); /* Subtle glow */
+}
+
+.progress-counter {
+  position: absolute;
+  right: 15px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 2;
 }
 
 .question-card {
