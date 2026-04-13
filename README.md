@@ -43,7 +43,8 @@ Launch the development server
 
 Bash
 npm run dev
-📂 Project Structure
+
+## 📂 Project Structure
 Plaintext
 ├── src/
 │   ├── App.jsx        # Main application logic & state management
@@ -52,7 +53,7 @@ Plaintext
 │   └── main.jsx       # React entry point
 └── public/            # Static assets
 
-🗺️ Roadmap
+## 🗺️ Roadmap
 [ ] Add Spaced Repetition System (SRS) logic.
 
 [ ] Implement multiple deck selection (JavaScript, React, CSS, etc.).
