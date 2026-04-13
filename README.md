@@ -1,4 +1,7 @@
 # ⚡ DevCards: Interactive Flashcard App
+
+![App Preview](./flashcard-app/src/assets/app-preview.png)
+
 A sleek, responsive React application designed to help developers master core web development concepts through interactive study sessions. Featuring a tactile 3D card-flip experience and real-time progress tracking.
 
 ## ✨ Key Features
